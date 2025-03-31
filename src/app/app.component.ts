@@ -17,4 +17,9 @@ export class AppComponent {
     new firstItem('Learn Angular3')
   ];
   title = 'Ali_1ST_Project';
+
+  toggleItem(item : firstItem){
+    item.isCompleted = !item.isCompleted;
+    console.log(item)
+  }
 }
