@@ -12,9 +12,9 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   items :firstItem[] = [
-    // new firstItem('Learn Angular1'),
-    // new firstItem('Learn Angular2', true),
-    // new firstItem('Learn Angular3')
+    new firstItem('Learn Angular1'),
+    new firstItem('Learn Angular2', true),
+    new firstItem('Learn Angular3')
   ];
   title = 'Ali_1ST_Project';
 }
