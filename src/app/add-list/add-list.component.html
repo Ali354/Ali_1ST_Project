@@ -1,0 +1,23 @@
+<ul class="list">
+    <div *ngIf="items.length == 0; else existList">
+      There are no items!
+    </div>
+  <ng-template #existList>
+      
+    <li *ngFor="let item of items; index as ii">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="checkbox" type="checkbox" 
+          [checked]="item.isCompleted"
+          [attr.data-index]="ii"
+          (click)="toggleItem(item)"
+          >
+          {{
+            item.text
+          }}
+        </label>
+      </div>
+    </li>
+  </ng-template>
+
+    </ul>

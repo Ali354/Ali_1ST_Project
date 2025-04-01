@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { firstItem } from '../shared/models/firstItem';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AddListComponent } from "./add-list/add-list.component";
 
 const filters = [
   (item : firstItem)=>item,
@@ -13,8 +14,9 @@ const filters = [
   selector: 'app-root',
   imports: [
     CommonModule,
-    FormsModule
-  ],
+    FormsModule,
+    AddListComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -29,10 +31,7 @@ export class AppComponent {
   NewItemText = '';
 
   listFilter : any = '0';
-  toggleItem(item : firstItem){
-    item.isCompleted = !item.isCompleted;
-    console.log(item)
-  }
+ 
   addnewItem(){
     this.items.push(new firstItem(this.NewItemText));
     // this.NewItemText='';
